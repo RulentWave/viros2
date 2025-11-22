@@ -30,8 +30,6 @@ modules:
         - duperemove
         - steam-devices
         - rustup
-        - gcc
-        - gcc-c++
         - perl
         - pass
         - gh
@@ -81,6 +79,10 @@ modules:
         - luarocks
         - oh-my-posh
         - lazygit # From the dejan/lazygit copr
+    group-install:
+      with-optional: true
+      packages:
+        - c-development
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
