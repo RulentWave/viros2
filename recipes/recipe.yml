@@ -66,7 +66,6 @@ modules:
         - opam
         - java-latest-openjdk-devel
         - rlwrap
-        - nu
         - zoxide
         - kitty
         - bat
@@ -80,6 +79,7 @@ modules:
         - chezmoi
         - helix
         - luarocks
+        - oh-my-posh
         - lazygit # From the dejan/lazygit copr
     remove:
       packages:
