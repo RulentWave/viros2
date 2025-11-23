@@ -79,6 +79,11 @@ modules:
         - helix
         - luarocks
         - oh-my-posh
+        - clevis
+        - clevis-luks
+        - clevis-dracut
+        - clevis-udisks2
+        - clevis-systemd
         - lazygit # From the dejan/lazygit copr
         - wezterm # from wezfurlong/wezterm-nightly
     group-install:
