@@ -80,7 +80,7 @@ modules:
         - luarocks
         - oh-my-posh
         - lazygit # From the dejan/lazygit copr
-        - westerm # from wezfurlong/wezterm-nightly
+        - wezterm # from wezfurlong/wezterm-nightly
     group-install:
       with-optional: true
       packages:
