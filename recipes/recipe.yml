@@ -84,6 +84,8 @@ modules:
         - clevis-dracut
         - clevis-udisks2
         - clevis-systemd
+        - ansible
+        - ansible-collection-community-general
         - lazygit # From the dejan/lazygit copr
         - wezterm # from wezfurlong/wezterm-nightly
     group-install:
