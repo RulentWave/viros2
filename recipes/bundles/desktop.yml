@@ -1,0 +1,28 @@
+modules:
+  - type: dnf
+    install:
+      packages:
+        - gamemode
+        - steam-devices
+        - mpv
+        - mpv-mpris
+        - mame-tools
+        - wireshark
+    remove:
+      packages:
+        # example: removing firefox (in favor of the flatpak)
+        # "firefox" is the main package, "firefox-langpacks" is a dependency
+        - firefox
+        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - type: default-flatpaks
+    configurations:
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        # If no repo information is specified, Flathub will be used by default
+        install: # system flatpaks we want all users to have and not remove
+          - com.brave.Browser
+          - org.libreoffice.LibreOffice
+          - org.mozilla.firefox
+      - scope: user # Also add Flathub user repo, but no user packages
+

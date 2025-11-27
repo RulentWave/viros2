@@ -1,0 +1,46 @@
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: dnf
+    repos:
+      copr:
+        - wezfurlong/wezterm-nightly
+        - dejan/lazygit
+    install:
+      packages:
+        - lazygit # From the dejan/lazygit copr
+        - wezterm
+        - chezmoi
+        - zsh
+        - oh-my-posh
+        - zoxide
+        - uutils-coreutils
+        - btrfsmaintenance
+        - duperemove
+        - yt-dlp
+        - neovim
+        - luarocks
+        - clevis
+        - clevis-luks
+        - clevis-dracut
+        - clevis-udisks2
+        - clevis-systemd
+        - NetworkManager-tui
+        - gh
+        - fping
+        - fd-find
+        - telnet
+        - netcat
+        - btop
+        - wireshark-cli
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - Hack
+
+  - type: soar
+    auto-upgrade: true
