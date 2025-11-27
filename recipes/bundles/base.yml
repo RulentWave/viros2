@@ -37,6 +37,7 @@ modules:
         - btop
         - gnupg2-scdaemon
         - wireshark-cli
+        - nushell
 
   - type: fonts
     fonts:
