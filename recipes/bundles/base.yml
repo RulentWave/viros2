@@ -35,12 +35,10 @@ modules:
         - telnet
         - netcat
         - btop
+        - gnupg2-scdaemon
         - wireshark-cli
 
   - type: fonts
     fonts:
       nerd-fonts:
         - Hack
-
-  - type: soar
-    auto-upgrade: true
