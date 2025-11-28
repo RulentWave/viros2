@@ -38,6 +38,7 @@ modules:
         - gnupg2-scdaemon
         - wireshark-cli
         - nushell
+        - tmux
 
   - type: fonts
     fonts:
