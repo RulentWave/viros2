@@ -39,6 +39,7 @@ modules:
         - wireshark-cli
         - nushell
         - tmux
+        - udisks2 # Added so that fwupd works
 
   - type: fonts
     fonts:
