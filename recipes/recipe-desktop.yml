@@ -15,4 +15,5 @@ modules:
   - from-file: bundles/base.yml
   - from-file: bundles/development.yml
   - from-file: bundles/desktop.yml
+  - from-file: bundles/work.yml
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
