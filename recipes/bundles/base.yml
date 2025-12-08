@@ -45,3 +45,10 @@ modules:
     fonts:
       nerd-fonts:
         - Hack
+  - type: systemd
+    system:
+      enabled:
+        - podman-auto-update.timer
+    user:
+      enabled:
+        - podman-auto-update.timer
