@@ -52,6 +52,7 @@ modules:
     system:
       enabled:
         - podman-auto-update.timer
+        - btrfs-scrub.timer
     user:
       enabled:
         - podman-auto-update.timer
