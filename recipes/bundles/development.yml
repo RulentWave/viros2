@@ -4,7 +4,7 @@ modules:
       keys:
         - https://packages.microsoft.com/keys/microsoft.asc
       files:
-        - https://packages.microsoft.com/yumrepos/vscode
+        - https://packages.microsoft.com/yumrepos/vscode/config.repo
     install:
       packages:
         - rustup
