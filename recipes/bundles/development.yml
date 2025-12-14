@@ -32,3 +32,4 @@ modules:
       with-optional: false
       packages:
         - c-development
+        - development-tools
