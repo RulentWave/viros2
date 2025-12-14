@@ -28,8 +28,7 @@ modules:
         - butane
         - ansible
         - ansible-collection-community-general
-        - itcl
     group-install:
-      with-optional: true
+      with-optional: false
       packages:
         - c-development
