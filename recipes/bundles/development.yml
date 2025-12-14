@@ -1,5 +1,10 @@
 modules:
   - type: dnf
+    repos:
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
+      files:
+        - https://packages.microsoft.com/yumrepos/vscode
     install:
       packages:
         - rustup
@@ -28,6 +33,7 @@ modules:
         - butane
         - ansible
         - ansible-collection-community-general
+        - code
     group-install:
       with-optional: false
       packages:
