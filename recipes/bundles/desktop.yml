@@ -24,5 +24,6 @@ modules:
           - com.brave.Browser
           - org.libreoffice.LibreOffice
           - org.mozilla.firefox
+          - org.kde.gwenview
       - scope: user # Also add Flathub user repo, but no user packages
 
