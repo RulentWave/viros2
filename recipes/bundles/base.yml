@@ -30,7 +30,6 @@ modules:
         - clevis-dracut
         - clevis-udisks2
         - clevis-systemd
-        - NetworkManager-tui
         - gh
         - fping
         - fd-find

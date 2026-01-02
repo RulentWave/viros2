@@ -23,4 +23,8 @@ modules:
         - rpm-ostreed-automatic.timer
       disabled:
         - zincati.service
+  - type: dnf
+    install:
+      packages:
+        - NetworkManager-tui
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
