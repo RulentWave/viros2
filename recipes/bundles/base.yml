@@ -53,6 +53,7 @@ modules:
       enabled:
         - podman-auto-update.timer
         - btrfs-scrub.timer
+        - sshd.service
     user:
       enabled:
         - podman-auto-update.timer
