@@ -25,5 +25,6 @@ modules:
           - org.libreoffice.LibreOffice
           - org.mozilla.firefox
           - org.kde.gwenview
+          - com.yubico.yubioath
       - scope: user # Also add Flathub user repo, but no user packages
 
