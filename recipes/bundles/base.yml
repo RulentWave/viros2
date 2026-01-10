@@ -41,6 +41,7 @@ modules:
         - udisks2 # Added so that fwupd works
         - tailscale
         - 7zip
+        - 7zip-standalone-all
 
   - type: fonts
     fonts:
