@@ -9,12 +9,10 @@ modules:
       files:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       copr:
-        - wezfurlong/wezterm-nightly
         - dejan/lazygit
     install:
       packages:
         - lazygit # From the dejan/lazygit copr
-        - wezterm
         - chezmoi
         - zsh
         - oh-my-posh
