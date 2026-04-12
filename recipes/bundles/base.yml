@@ -8,6 +8,8 @@ modules:
     repos:
       files:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      keys:
+        - https://pkgs.tailscale.com/stable/fedora/repo.gpg
       copr:
         - dejan/lazygit
     install:
