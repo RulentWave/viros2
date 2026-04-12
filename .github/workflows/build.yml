@@ -30,6 +30,7 @@ jobs:
           - recipe-boxen.yml
           - recipe-desktop.yml
           - recipe-steamdeck.yml
+          - recipe-distrobox.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
