@@ -1,0 +1,10 @@
+modules:
+  - type: systemd
+    system:
+      enabled:
+        - podman-auto-update.timer
+        - btrfs-scrub.timer
+        - sshd.service
+    user:
+      enabled:
+        - podman-auto-update.timer
