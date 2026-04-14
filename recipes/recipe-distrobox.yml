@@ -14,4 +14,5 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
   - from-file: bundles/base.yml
   - from-file: bundles/development.yml
+  - from-file: bundles/w-tools.yml
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
