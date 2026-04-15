@@ -45,3 +45,10 @@ modules:
         - 7zip
         - 7zip-standalone-all
         - smartmontools
+  - type: script
+    snippets:
+      - "mkdir -p /var/opt"
+      - "mkdir -p /var/srv"
+      - "mkdir -p /var/srv"
+      - "mkdir -p /var/mnt"
+      - "mkdir -p /var/usrlocal"
