@@ -27,6 +27,7 @@ modules:
         - dfu-util
         - kernel-devel
         - android-tools
+        - pipx
         - opam
         - java-latest-openjdk-devel
         - python3-ramalama
