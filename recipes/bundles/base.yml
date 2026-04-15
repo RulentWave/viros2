@@ -49,6 +49,7 @@ modules:
     snippets:
       - "mkdir -p /var/opt"
       - "mkdir -p /var/srv"
-      - "mkdir -p /var/srv"
+      - "mkdir -p /var/roothome"
+      - "mkdir -p /var/home"
       - "mkdir -p /var/mnt"
       - "mkdir -p /var/usrlocal"
