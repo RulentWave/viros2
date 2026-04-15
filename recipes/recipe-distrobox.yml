@@ -17,6 +17,5 @@ modules:
   - from-file: bundles/w-tools.yml
   - type: script
     snippets: 
-      - "rm /opt"
-      - "ln -s /usr/lib/opt /opt"
+      - "ln -sf /usr/lib/opt /opt"
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
