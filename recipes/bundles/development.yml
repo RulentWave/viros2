@@ -29,6 +29,7 @@ modules:
         - android-tools
         - pipx
         - opam
+        - python3-pandas
         - java-latest-openjdk-devel
         - python3-ramalama
         - butane
