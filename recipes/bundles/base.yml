@@ -45,3 +45,4 @@ modules:
         - 7zip
         - 7zip-standalone-all
         - smartmontools
+        - steam-devices
