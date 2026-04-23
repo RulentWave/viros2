@@ -2,7 +2,7 @@ modules:
   - type: dnf
     repos:
       keys:
-        - https://packages.microsoft.com/keys/microsoft.asc
+        - keys/microsoft.asc
       files:
         - https://packages.microsoft.com/yumrepos/vscode/config.repo
     install:

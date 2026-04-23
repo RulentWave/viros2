@@ -9,7 +9,7 @@ modules:
       files:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       keys:
-        - https://pkgs.tailscale.com/stable/fedora/repo.gpg
+        -  keys/tailscale-fedora-repo.gpg
       copr:
         - dejan/lazygit
     install:
