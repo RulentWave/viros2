@@ -8,8 +8,10 @@ modules:
     repos:
       files:
         - tailscale.repo
+        - gemfury-nushell.repo
       keys:
-        -  keys/tailscale-fedora-repo.gpg
+        - keys/tailscale-fedora-repo.gpg
+        - keys/gemfury-nushell.key
     install:
       packages:
         - chezmoi

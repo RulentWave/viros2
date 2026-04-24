@@ -2,5 +2,4 @@
 name=Gemfury Nushell Repo
 baseurl=https://yum.fury.io/nushell/
 enabled=1
-gpgcheck=0
-gpgkey=https://yum.fury.io/nushell/gpg.key
+gpgcheck=1
