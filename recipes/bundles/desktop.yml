@@ -1,7 +1,13 @@
 modules:
   - type: dnf
+    repos:
+      files:
+        - brave-browser.repo
+      keys:
+        -  keys/brave-core.asc
     install:
       packages:
+        - brave-browser
         - gamemode
         - steam-devices
         - mpv
@@ -21,7 +27,6 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - com.brave.Browser
           - org.libreoffice.LibreOffice
           - org.mozilla.firefox
           - org.kde.gwenview
