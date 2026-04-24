@@ -3,8 +3,10 @@ modules:
     repos:
       files:
         - brave-browser.repo
+        - dangerzone.repo
       keys:
-        -  keys/brave-core.asc
+        - keys/brave-core.asc
+        - keys/fpf-yum-tools-archive-keyring.gpg
     install:
       packages:
         - brave-browser
