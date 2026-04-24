@@ -1,5 +1,0 @@
-modules:
-  - type: dnf
-    install:
-      packages:
-        - https://resources.ninjarmm.com/development/ninjacontrol/13.35.8340/ninjarmm-ncplayer-13.35.8340_x86_64.rpm
