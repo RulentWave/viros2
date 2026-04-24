@@ -3,7 +3,7 @@ modules:
     repos:
       files:
         - brave-browser.repo
-      keys:
+      # keys:
         # -  keys/brave-core.asc
     install:
       packages:
