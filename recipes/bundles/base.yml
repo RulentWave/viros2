@@ -33,7 +33,6 @@ modules:
         - telnet
         - netcat
         - btop
-        - gnupg2-scdaemon
         - wireshark-cli
         - nushell
         - tmux
