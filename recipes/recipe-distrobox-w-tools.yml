@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: viros-distrobox
+name: viros-distrobox-w-tools
 # description will be included in the image's metadata
 description: This is my personal OS image.
 
@@ -14,4 +14,5 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
   - from-file: bundles/base.yml
   - from-file: bundles/development.yml
+  - from-file: bundles/w-tools.yml
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
