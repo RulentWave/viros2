@@ -2,7 +2,7 @@ modules:
   - type: dnf
     repos:
       keys:
-        - keys/microsoft.asc
+        # - keys/microsoft.asc
       files:
         - vscode.repo
     install:
