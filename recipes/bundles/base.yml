@@ -7,14 +7,11 @@ modules:
   - type: dnf
     repos:
       files:
-        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+        - tailscale.repo
       keys:
         -  keys/tailscale-fedora-repo.gpg
-      copr:
-        - dejan/lazygit
     install:
       packages:
-        - lazygit # From the dejan/lazygit copr
         - chezmoi
         - zsh
         - oh-my-posh
