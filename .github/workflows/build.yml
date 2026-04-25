@@ -32,7 +32,87 @@ jobs:
           - recipe-boxen.yml
           - recipe-steamdeck.yml
     steps:
-      # the build is fully handled by the reusable github action
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3
+
+      - name: Install skopeo
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y skopeo
+
+      - name: Verify base image signature
+        env:
+          RECIPE: ${{ matrix.recipe }}
+        run: |
+          set -euo pipefail
+
+          BASE_IMAGE=$(yq '.base-image' "./config/recipes/${RECIPE}")
+          IMAGE_VERSION=$(yq '.image-version' "./config/recipes/${RECIPE}")
+          REF="${BASE_IMAGE}:${IMAGE_VERSION}"
+          echo "Base image: $REF"
+
+          case "$BASE_IMAGE" in
+
+            ghcr.io/ublue-os/*)
+              echo "==> cosign verify (ublue-os key)"
+              cosign verify \
+                --key ./cosign-keys/ublue-os.pub \
+                "$REF" | jq
+              ;;
+
+            ghcr.io/blue-build/*)
+              echo "==> cosign verify (blue-build key)"
+              cosign verify \
+                --key ./cosign-keys/blue-build.pub \
+                "$REF" | jq
+              ;;
+
+            registry.fedoraproject.org/*)
+              echo "==> skopeo + GPG policy verify (Fedora key)"
+              KEY="$(realpath ./cosign-keys/fedora.gpg)"
+              POLICY_DIR=$(mktemp -d)
+
+              cat > "${POLICY_DIR}/policy.json" <<EOF
+          {
+            "default": [{"type": "reject"}],
+            "transports": {
+              "docker": {
+                "registry.fedoraproject.org": [{
+                  "type": "signedBy",
+                  "keyType": "GPGKeys",
+                  "keyPath": "${KEY}"
+                }]
+              }
+            }
+          }
+          EOF
+
+              mkdir -p "${POLICY_DIR}/registries.d"
+              cat > "${POLICY_DIR}/registries.d/fedora.yaml" <<EOF
+          docker:
+            registry.fedoraproject.org:
+              sigstore: https://registry.fedoraproject.org/containers/sigstore
+          EOF
+
+              skopeo --policy "${POLICY_DIR}/policy.json" \
+                     --registries.d "${POLICY_DIR}/registries.d" \
+                     inspect "docker://${REF}" > /dev/null
+              echo "Signature OK"
+              ;;
+
+            quay.io/fedora/fedora-coreos)
+              echo "==> Skipping verification: FCOS does not publish container signatures."
+              echo "    Consider pinning image-version to a sha256 digest instead."
+              ;;
+
+            *)
+              echo "::error::No verification configured for base image: ${BASE_IMAGE}"
+              exit 1
+              ;;
+          esac
       - name: Build Custom Image
         uses: blue-build/github-action@v1.11
         with:
