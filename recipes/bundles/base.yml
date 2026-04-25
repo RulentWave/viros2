@@ -14,6 +14,7 @@ modules:
         - keys/gemfury-nushell.key
     install:
       packages:
+        - distrobox
         - chezmoi
         - zsh
         - oh-my-posh
@@ -38,7 +39,6 @@ modules:
         - wireshark-cli
         - nushell
         - tmux
-        - udisks2 # Added so that fwupd works
         - tailscale
         - 7zip
         - 7zip-standalone-all
