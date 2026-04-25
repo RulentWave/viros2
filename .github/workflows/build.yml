@@ -49,8 +49,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          BASE_IMAGE=$(yq '.base-image' "./config/recipes/${RECIPE}")
-          IMAGE_VERSION=$(yq '.image-version' "./config/recipes/${RECIPE}")
+          BASE_IMAGE=$(yq '.base-image' "./recipes/${RECIPE}")
+          IMAGE_VERSION=$(yq '.image-version' "./recipes/${RECIPE}")
           REF="${BASE_IMAGE}:${IMAGE_VERSION}"
           echo "Base image: $REF"
 
