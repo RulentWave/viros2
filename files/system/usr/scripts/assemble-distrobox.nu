@@ -72,6 +72,29 @@ export def distrobox-assemble [action: string] {
 	}
 }
 
+# Verify each distrobox's image against its cosign_key (if set).
+# Returns only the entries that pass (or have no key configured).
+export def verify-cosign-keys [] {
+    $in | each {|d|
+        let key = ($d | get -o cosign_key)
+        if ($key | is-empty) {
+            $d
+        } else if not ($key | path exists) {
+            print $"Skipping ($d.name): cosign key not found at ($key)"
+            null
+        } else {
+            let result = (do { cosign verify --key $key $d.image } | complete)
+            if $result.exit_code == 0 {
+                $d
+            } else {
+                print $"Skipping ($d.name): cosign verification failed for ($d.image)"
+                print $result.stderr
+                null
+            }
+        }
+    } | compact
+}
+
 # Load configs from the drop-in directory, rewrite hostnames, and render to INI strings.
 def prepare-distroboxes [] {
 	let dir = $dropin_dir
@@ -97,6 +120,7 @@ def prepare-distroboxes [] {
 
 	$distroboxes
 	| update-distrobox-hostnames
+	| verify-cosign-keys
 	| each {|i| $i | to distrobox-ini }
 }
 
