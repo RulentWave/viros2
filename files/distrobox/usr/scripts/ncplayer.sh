@@ -116,26 +116,18 @@ install_libopenh264
 exec bwrap \
 	`# --- read-only system ---` \
 	--ro-bind /usr /usr \
-	--ro-bind /etc /etc \
 	--ro-bind /opt /opt \
 	--symlink usr/lib /lib \
 	--symlink usr/lib64 /lib64 \
 	--symlink usr/bin /bin \
 	--symlink usr/sbin /sbin \
 	\
-	`# --- kernel/pseudo filesystems ---` \
-	--proc /proc \
-	--dev /dev \
-	--tmpfs /tmp \
-	--tmpfs /var/tmp \
-	--tmpfs /run \
-	\
 	`# --- isolated home ---` \
 	--bind "$SANDBOX_HOME" "$HOME" \
 	--setenv HOME "$HOME" \
 	--chdir "$HOME" \
 	\
-	`# --- runtime dir: only what's needed ---` \
+	`# --- runtime dir: only whats needed ---` \
 	--tmpfs "$RUNTIME" \
 	--ro-bind-try "$RUNTIME/wayland-0" "$RUNTIME/wayland-0" \
 	--ro-bind-try "$RUNTIME/pulse" "$RUNTIME/pulse" \
