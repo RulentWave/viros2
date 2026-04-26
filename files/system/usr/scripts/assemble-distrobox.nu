@@ -22,31 +22,37 @@ export def "to distrobox-ini" [] {
 	let data = match ($input | describe -d | get type) {
 		"record" => [$input]
 		_        =>  $input
-		}
+	}
 
 	let ready = $data | select -o ...$DISTROBOX_FIELDS
 
-	  # Apply `default []` for every list field
-  let list_fields = ($LIST_FIELDS_SPACE | append $LIST_FIELDS_SEMI)
-  let defaulted = $list_fields
-		| reduce -f $ready {|field, acc| $acc | default [] $field
-			}
+	# Apply `default []` for every list field
+	let list_fields = ($LIST_FIELDS_SPACE | append $LIST_FIELDS_SEMI)
+	let defaulted = $list_fields
+		| reduce -f $ready {|field, acc| $acc | default [] $field }
 
-    # Join space-separated list fields
-  let joined_space = $LIST_FIELDS_SPACE | reduce -f $defaulted {|field, acc|
-      $acc | update $field {|row| $row | get $field | str join " " }
-    }
+	# Join space-separated list fields
+	let joined_space = $LIST_FIELDS_SPACE | reduce -f $defaulted {|field, acc|
+		$acc | update $field {|row| $row | get $field | str join " " }
+	}
 
-    # Join semicolon-separated list fields
-  let joined = $LIST_FIELDS_SEMI | reduce -f $joined_space {|field, acc|
-      $acc | update $field {|row| $row | get $field | str join " ; " }
-    }
-	$joined
+	# Join semicolon-separated list fields
+	let joined = $LIST_FIELDS_SEMI | reduce -f $joined_space {|field, acc|
+		$acc | update $field {|row| $row | get $field | str join " ; " }
+	}
+
+	# Strip null/empty values from each record so they don't appear in TOML
+	let cleaned = $joined | each {|row|
+    $row | items {|k, v| {key: $k, value: $v}}
+         | where value != null and value != ""
+         | reduce -f {} {|it, acc| $acc | upsert $it.key $it.value }
+		}
+
+	$cleaned
 	| group-by name
 	| update cells {|v| $v | first | reject name}
 	| to toml
 	| str replace --all --regex '(?m)^(\S+)\s*=\s*' '${1}='
-
 }
 
 export def update-distrobox-hostnames [] {
@@ -77,38 +83,43 @@ export def distrobox-assemble [action: string] {
 export def verify-cosign-keys [] {
     $in | each {|d|
         let key = ($d | get -o cosign_key)
-        if ($key | is-empty) {
+        if ($key | describe) != "string" or ($key | is-empty) {
+            print $"($d.name): no cosign key configured, skipping verification"
             $d
         } else if not ($key | path exists) {
-            print $"Skipping ($d.name): cosign key not found at ($key)"
+            print $"($d.name): cosign key not found at ($key), skipping entry"
             null
         } else {
+            print $"($d.name): verifying ($d.image) with key ($key)..."
             let result = (do { cosign verify --key $key $d.image } | complete)
             if $result.exit_code == 0 {
+                print $"($d.name): ✓ cosign verification passed"
                 $d
             } else {
-                print $"Skipping ($d.name): cosign verification failed for ($d.image)"
+                print $"($d.name): ✗ cosign verification failed for ($d.image)"
                 print $result.stderr
                 null
             }
         }
     } | compact
 }
-
 # Load configs from the drop-in directory, rewrite hostnames, and render to INI strings.
 def prepare-distroboxes [] {
 	let dir = $dropin_dir
 	let distroboxes = if ($dir | path exists) {
 		ls $dir | where type == file | get name
 	| each { |f| try {
-	
 			let data = open $f
-			if ($data | describe | str starts-with "list") { $data } else { [$data] }
-			} catch {|e|
-					print $"Skipping ($f): ($e.msg)"
-					[]
+			match ($data | describe -d | get type) {
+				"table" | "list" => $data
+				"record" => [$data]
+				_ => []
 			}
-      }
+		} catch {|e|
+			print $"Skipping ($f): ($e.msg)"
+			[]
+		}
+	}
       | flatten
     } else {
         []
@@ -133,8 +144,18 @@ def "main create" [] {
 }
 def "main rm"     [] { run "rm" }
 
-def "main print" {
+def "main print" [] {
 	prepare-distroboxes |each {|ini| print $ini; print "---"}
+}
+
+def "main debug" [] {
+	let dir = $dropin_dir
+	ls $dir | where type == file | get name | each {|f|
+		let data = open $f
+		print $"=== ($f) ==="
+		print ($data | describe)
+		print $data
+	}
 }
 
 def main [] {
