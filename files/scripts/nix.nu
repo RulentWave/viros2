@@ -46,7 +46,7 @@ try {
   return $e
 }
 try {
-  $NIXMOUNT | save /usr/lib/sytemd/system/nix.mount
+  $NIXMOUNT | save /usr/lib/systemd/system/nix.mount
 } catch {|e|
   print $"Could not save nix.mount to /usr/lib/systemd/system: ($e.msg)"
   return $e
