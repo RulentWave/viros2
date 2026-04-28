@@ -33,7 +33,7 @@ jobs:
           - recipe-steamdeck.yml
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install cosign
         uses: sigstore/cosign-installer@v3
