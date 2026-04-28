@@ -1,2 +1,4 @@
 modules:
-  - type: nix.nu
+  - type: script
+    scripts:
+      - nix.nu
