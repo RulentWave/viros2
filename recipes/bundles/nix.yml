@@ -2,3 +2,8 @@ modules:
   - type: script
     scripts:
       - nix.nu
+  - type: systemd
+    system:
+      enabled:
+        - nix.mount
+        - nix-daemon.service
