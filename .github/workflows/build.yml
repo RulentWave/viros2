@@ -29,7 +29,6 @@ jobs:
           # !! Add your recipes here
           - recipe-distrobox.yml
           - recipe-desktop.yml
-          - recipe-nixdesktop.yml
           - recipe-boxen.yml
           - recipe-steamdeck.yml
     steps:
