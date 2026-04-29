@@ -36,6 +36,7 @@ modules:
         - ansible
         - ansible-collection-community-general
         - code
+        - kdbg
     group-install:
       with-optional: false
       packages:
