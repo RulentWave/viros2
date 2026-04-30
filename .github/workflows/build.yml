@@ -51,6 +51,13 @@ jobs:
 
           case "$BASE_IMAGE" in
 
+            quay.io/fedora-ostree-desktops/*)
+              echo "==> cosign verify (fedora-ostree-desktops key)"
+              cosign verify \
+                --key ./cosign-keys/uquay.io-fedora-ostree-desktops.pub \
+                "$REF" | jq
+              ;;
+
             ghcr.io/ublue-os/*)
               echo "==> cosign verify (ublue-os key)"
               cosign verify \
