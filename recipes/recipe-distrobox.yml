@@ -8,6 +8,9 @@ description: This is my personal OS image.
 # the base image to build on top of (FROM) and the version tag to use
 base-image: registry.fedoraproject.org/fedora-toolbox
 image-version: latest # latest is also supported if you want new updates ASAP
+platforms:
+  - linux/amd64
+  - linux/arm64
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
