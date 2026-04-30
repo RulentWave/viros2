@@ -54,7 +54,7 @@ jobs:
             quay.io/fedora-ostree-desktops/*)
               echo "==> cosign verify (fedora-ostree-desktops key)"
               cosign verify \
-                --key ./cosign-keys/uquay.io-fedora-ostree-desktops.pub \
+                --key ./cosign-keys/quay.io-fedora-ostree-desktops.pub \
                 "$REF" | jq
               ;;
 
