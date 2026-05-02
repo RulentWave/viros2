@@ -45,3 +45,5 @@ modules:
         - smartmontools
         - pam-u2f
         - pam_yubico
+        - erofs-utils
+        - erofsfuse
