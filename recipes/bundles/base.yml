@@ -21,6 +21,7 @@ modules:
         - zoxide
         - uutils-coreutils
         - btrfsmaintenance
+        - minisign
         - duperemove
         - yt-dlp
         - neovim
