@@ -38,6 +38,7 @@ modules:
         - code
         - kdbg
         - flatpak-builder
+        - ninja-build
     group-install:
       with-optional: false
       packages:
