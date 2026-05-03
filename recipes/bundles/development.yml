@@ -37,6 +37,7 @@ modules:
         - ansible-collection-community-general
         - code
         - kdbg
+        - flatpak-builder
     group-install:
       with-optional: false
       packages:

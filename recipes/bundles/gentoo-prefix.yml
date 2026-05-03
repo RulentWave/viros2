@@ -1,0 +1,5 @@
+modules:
+  - type: copy
+    from: ghcr.io/rulentwave/gentoo-prefix-stage4@sha256:4a773111df8becda115eb18de88eb52157ac7bc53c2102d481d2e88ded1c0612
+    src: /out/gentoo-prefix.raw
+    dest: /usr/lib/extensions/
