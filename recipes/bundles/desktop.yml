@@ -14,6 +14,7 @@ modules:
         - steam-devices
         - mpv
         - mpv-mpris
+        - ntsync-autoload
         - mame-tools
         - wireshark
     remove:
