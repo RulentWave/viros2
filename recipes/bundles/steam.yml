@@ -1,0 +1,9 @@
+modules:
+  - type: dnf
+    repos:
+      files:
+        - negativo17/steam.repo
+    install:
+      packages:
+        - steam
+        - steam-devices
