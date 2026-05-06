@@ -39,6 +39,8 @@ modules:
         - kdbg
         - flatpak-builder
         - ninja-build
+        - fedpkg
+        - fedora-packager
     group-install:
       with-optional: false
       packages:
