@@ -1,0 +1,9 @@
+[copr:copr.fedorainfracloud.org:achno:gowall]
+name=Copr repo for gowall owned by achno
+baseurl=https://download.copr.fedorainfracloud.org/results/achno/gowall/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1

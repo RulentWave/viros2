@@ -4,9 +4,11 @@ modules:
       files:
         - brave-browser.repo
         - dangerzone.repo
+        - achno-gowall.repo
       keys:
         - keys/brave-core.asc
         - keys/fpf-yum-tools-archive-keyring.gpg
+        - keys/achno-gowall.gpg
     install:
       packages:
         - brave-browser
