@@ -7,3 +7,8 @@ modules:
       packages:
         - steam
         - steam-devices
+        - ntsync-autoload
+        - mame-tools
+        - gamescope
+        - gamemode
+        - mangohud
