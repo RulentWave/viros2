@@ -42,6 +42,9 @@ modules:
         - fedpkg
         - fedora-packager
         - tito
+        - dotnet-sdk-10.0
+        - azure-cli
+        - azure-vm-utils
     group-install:
       with-optional: false
       packages:
