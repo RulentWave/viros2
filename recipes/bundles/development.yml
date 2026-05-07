@@ -41,6 +41,7 @@ modules:
         - ninja-build
         - fedpkg
         - fedora-packager
+        - tito
     group-install:
       with-optional: false
       packages:
