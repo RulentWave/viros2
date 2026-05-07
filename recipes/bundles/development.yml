@@ -42,6 +42,8 @@ modules:
         - fedpkg
         - fedora-packager
         - copr-cli
+        - rpm-build
+        - rpmdevtools
         - tito
         - dotnet-sdk-10.0
         - azure-cli
