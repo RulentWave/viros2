@@ -40,6 +40,7 @@ modules:
         - wireshark-cli
         - nushell
         - tmux
+        - zram-generator-defaults
         - tailscale
         - 7zip
         - 7zip-standalone-all
