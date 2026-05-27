@@ -14,7 +14,7 @@ modules:
         - brave-browser
         - mpv
         - mpv-mpris
-        - skanlite
+        - skanpage
     remove:
       packages:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
