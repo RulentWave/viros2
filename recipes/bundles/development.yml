@@ -1,5 +1,6 @@
 modules:
   - type: dnf
+    source: ghcr.io/rulentwave/modules/dnf:latest
     repos:
       keys:
         - keys/microsoft.asc
@@ -23,7 +24,6 @@ modules:
         - avrdude
         - clang
         - clang-tools-extra
-        #- dfu-programmer
         - dfu-util
         - kernel-devel
         - android-tools
@@ -53,3 +53,6 @@ modules:
       packages:
         - c-development
         - development-tools
+    builddep:
+      packages:
+        - mpv
