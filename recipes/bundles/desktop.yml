@@ -15,6 +15,7 @@ modules:
         - mpv
         - mpv-mpris
         - skanpage
+        - gowall
     remove:
       packages:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
