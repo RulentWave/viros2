@@ -49,7 +49,6 @@ modules:
         - azure-cli
         - azure-vm-utils
         - meson
-        - libavcodec-devel
     group-install:
       with-optional: false
       packages:
