@@ -16,6 +16,7 @@ platforms:
 # you can include multiple instances of the same module
 modules:
   - from-file: bundles/base.yml
+  - from-file: bundles/fedora-44.yml
   - from-file: bundles/development.yml
   - type: files
     files:

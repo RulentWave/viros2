@@ -1,0 +1,10 @@
+modules:
+  - type: dnf
+    repos:
+      files:
+        - virulent-carapace-bin-fedora.repo
+      keys:
+        - keys/virulent-carapace.gpg
+    install:
+      packages:
+        - carapace-bin
