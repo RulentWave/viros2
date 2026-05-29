@@ -52,3 +52,4 @@ modules:
         - pam_yubico
         - erofs-utils
         - just
+        - carapace-bin
