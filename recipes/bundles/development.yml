@@ -51,6 +51,7 @@ modules:
         - meson
         - golang
         - python3-jinja2-cli
+        - gnome-boxes
     group-install:
       with-optional: false
       packages:
