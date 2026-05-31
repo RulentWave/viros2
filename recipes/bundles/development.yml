@@ -50,6 +50,7 @@ modules:
         - azure-vm-utils
         - meson
         - golang
+        - python3-jinja2-cli
     group-install:
       with-optional: false
       packages:
