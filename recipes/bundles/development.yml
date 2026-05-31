@@ -49,6 +49,7 @@ modules:
         - azure-cli
         - azure-vm-utils
         - meson
+        - golang
     group-install:
       with-optional: false
       packages:
