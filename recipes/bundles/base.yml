@@ -50,3 +50,5 @@ modules:
         - pam_yubico
         - erofs-utils
         - just
+        - qemu-kvm
+        - edk2-ovmf
