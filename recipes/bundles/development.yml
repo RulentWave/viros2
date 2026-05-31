@@ -52,6 +52,8 @@ modules:
         - golang
         - python3-jinja2-cli
         - gnome-boxes
+        - libvirt
+        - virt-install
     group-install:
       with-optional: false
       packages:
