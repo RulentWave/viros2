@@ -4,8 +4,10 @@ modules:
     repos:
       keys:
         - keys/microsoft.asc
+        - keys/repomod.xml.key
       files:
         - vscode.repo
+        - system_systemd.repo
     install:
       packages:
         - rustup
@@ -54,6 +56,11 @@ modules:
         - gnome-boxes
         - libvirt
         - virt-install
+    replace:
+      - from_repo: system_systemd
+        packages:
+          - systemd
+          - mkosi
     group-install:
       with-optional: false
       packages:

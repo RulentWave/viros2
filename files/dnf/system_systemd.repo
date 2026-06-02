@@ -1,0 +1,6 @@
+[system_systemd]
+name=systemd packages built from upstream main (Fedora_44)
+type=rpm-md
+baseurl=https://download.opensuse.org/repositories/system:/systemd/Fedora_44/
+gpgcheck=1
+enabled=1
