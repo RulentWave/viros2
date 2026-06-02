@@ -4,7 +4,7 @@ modules:
     repos:
       keys:
         - keys/microsoft.asc
-        - keys/repomod.xml.key
+        - keys/obs-systemd.asc
       files:
         - vscode.repo
         - system_systemd.repo
@@ -56,11 +56,11 @@ modules:
         - gnome-boxes
         - libvirt
         - virt-install
-    replace:
-      - from_repo: system_systemd
-        packages:
-          - systemd
-          - mkosi
+        - repo: system_systemd
+          skip-unavailable: true
+          packages:
+            - systemd
+            - mkosi
     group-install:
       with-optional: false
       packages:
