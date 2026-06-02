@@ -41,7 +41,6 @@ modules:
         - nushell
         - tmux
         - zram-generator-defaults
-        - mkosi
         - tailscale
         - 7zip
         - 7zip-standalone-all

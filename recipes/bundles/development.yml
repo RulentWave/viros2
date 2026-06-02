@@ -60,6 +60,16 @@ modules:
           skip-unavailable: true
           packages:
             - systemd
+            - systemd-container
+            - systemd-libs
+            - systemd-networkd
+            - systemd-pam
+            - systemd-resolved
+            - systemd-rpm-macros
+            - systemd-shared
+            - systemd-standalone-sysuers
+            - systemd-udev
+            - systemd-ukify
             - mkosi
     group-install:
       with-optional: false
