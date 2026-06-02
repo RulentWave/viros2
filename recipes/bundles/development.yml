@@ -56,21 +56,9 @@ modules:
         - gnome-boxes
         - libvirt
         - virt-install
-        - repo: system_systemd
-          skip-unavailable: true
-          packages:
-            - systemd
-            - systemd-container
-            - systemd-libs
-            - systemd-networkd
-            - systemd-pam
-            - systemd-resolved
-            - systemd-rpm-macros
-            - systemd-shared
-            - systemd-standalone-sysuers
-            - systemd-udev
-            - systemd-ukify
-            - mkosi
+        - efitools
+        - nss-tools
+        - pesign
     group-install:
       with-optional: false
       packages:
@@ -79,3 +67,6 @@ modules:
     builddep:
       packages:
         - mpv
+  - type: script
+    snippets:
+      - "dnf update -y"
