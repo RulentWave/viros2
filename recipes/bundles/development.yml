@@ -5,9 +5,6 @@ modules:
       keys:
         - keys/microsoft.asc
         - keys/obs-systemd.asc
-      files:
-        - vscode.repo
-        - system_systemd.repo
     install:
       packages:
         - rustup
@@ -56,9 +53,6 @@ modules:
         - gnome-boxes
         - libvirt
         - virt-install
-        - efitools
-        - nss-tools
-        - pesign
     group-install:
       with-optional: false
       packages:
@@ -67,6 +61,3 @@ modules:
     builddep:
       packages:
         - mpv
-  - type: script
-    snippets:
-      - "dnf update -y"
