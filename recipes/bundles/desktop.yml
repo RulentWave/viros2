@@ -16,6 +16,7 @@ modules:
         - mpv-mpris
         - skanpage
         - gowall
+        - dangerzone
     remove:
       packages:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
