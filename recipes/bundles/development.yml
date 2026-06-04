@@ -34,7 +34,6 @@ modules:
         - butane
         - ansible
         - ansible-collection-community-general
-        - code
         - kdbg
         - flatpak-builder
         - ninja-build
