@@ -9,12 +9,11 @@ modules:
       files:
         - tailscale.repo
         - atim-nushell.repo
-        - terra.repo
       keys:
         - keys/tailscale-fedora-repo.gpg
         - keys/atim-nushell.gpg
-        - keys/terra.asc
     install:
+      allow-erasing: true
       packages:
         - distrobox
         - chezmoi
@@ -44,6 +43,7 @@ modules:
         - nushell
         - tmux
         - zram-generator-defaults
+        - mkosi
         - tailscale
         - 7zip
         - 7zip-standalone-all
@@ -54,5 +54,3 @@ modules:
         - just
         - qemu-kvm
         - edk2-ovmf
-        - carapace
-
