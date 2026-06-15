@@ -9,9 +9,11 @@ modules:
       files:
         - tailscale.repo
         - atim-nushell.repo
+        - terra.repo
       keys:
         - keys/tailscale-fedora-repo.gpg
         - keys/atim-nushell.gpg
+        - keys/terra.asc
     install:
       packages:
         - distrobox
@@ -51,3 +53,4 @@ modules:
         - just
         - qemu-kvm
         - edk2-ovmf
+        - carapace
