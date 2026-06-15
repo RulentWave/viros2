@@ -17,6 +17,7 @@ modules:
         - skanpage
         - gowall
         - dangerzone
+        - google-noto-emoji-fonts
     remove:
       packages:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
