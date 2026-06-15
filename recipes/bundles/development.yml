@@ -52,6 +52,8 @@ modules:
         - gnome-boxes
         - libvirt
         - virt-install
+        - zed
+        - mise
     group-install:
       with-optional: false
       packages:
