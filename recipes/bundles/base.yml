@@ -27,6 +27,7 @@ modules:
         - duperemove
         - yt-dlp
         - neovim
+        - neovim-default-editor
         - luarocks
         - clevis
         - clevis-luks
