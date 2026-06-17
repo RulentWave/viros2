@@ -12,29 +12,12 @@ modules:
         - black
         - python3-isort
         - python3-yapf
-        - arm-none-eabi-binutils-cs
-        - arm-none-eabi-gcc-cs
-        - arm-none-eabi-gcc-cs-c++
-        - arm-none-eabi-newlib
-        - avr-binutils
-        - avr-gcc
-        - avr-gcc-c++
-        - avr-libc
-        - avrdude
-        - clang
-        - clang-tools-extra
-        - dfu-util
-        - kernel-devel
-        - android-tools
         - pipx
-        - opam
         - python3-pandas
-        - java-latest-openjdk-devel
         - python3-ramalama
         - butane
         - ansible
         - ansible-collection-community-general
-        - kdbg
         - flatpak-builder
         - ninja-build
         - fedpkg
@@ -53,7 +36,6 @@ modules:
         - libvirt
         - virt-install
         - zed
-        - mise
     group-install:
       with-optional: false
       packages:
