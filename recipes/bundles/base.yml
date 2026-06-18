@@ -60,3 +60,4 @@ modules:
         - carapace
         - helix
         - nvtop
+        - b3sum
