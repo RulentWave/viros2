@@ -18,6 +18,7 @@ modules:
     install:
       allow-erasing: true
       packages:
+        - yazi
         - distrobox
         - chezmoi
         - zsh
