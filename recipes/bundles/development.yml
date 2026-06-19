@@ -37,6 +37,8 @@ modules:
         - virt-install
         - zed
         - ollama
+        - anda
+        - terra-mock-configs
     group-install:
       with-optional: false
       packages:
