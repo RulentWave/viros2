@@ -27,7 +27,7 @@ modules:
         - btrfsmaintenance
         - minisign
         - duperemove
-        - yt-dlp
+        - yt-dlp-git
         - neovim
         - neovim-default-editor
         - luarocks
