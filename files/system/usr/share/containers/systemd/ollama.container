@@ -1,0 +1,21 @@
+[Unit]
+Description=Ollama ROCm container
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+ContainerName=ollama
+Image=ollama/ollama@sha256:3c54a1a1b80a470606fa5260abf62f3773f691e65e686f3df607b9ec12878f1c
+
+AddDevice=/dev/kfd
+AddDevice=/dev/dri
+
+Volume=ollama-data:/root/.ollama
+
+PublishPort=11434:11434
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -36,7 +36,6 @@ modules:
         - libvirt
         - virt-install
         - zed
-        - ollama
         - anda
         - terra-mock-configs
     group-install:
