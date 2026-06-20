@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Container]
 ContainerName=ollama
-Image=ollama/ollama@sha256:3c54a1a1b80a470606fa5260abf62f3773f691e65e686f3df607b9ec12878f1c
+Image=docker.io/ollama/ollama@sha256:3c54a1a1b80a470606fa5260abf62f3773f691e65e686f3df607b9ec12878f1c
 
 AddDevice=/dev/kfd
 AddDevice=/dev/dri
