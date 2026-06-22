@@ -23,6 +23,8 @@ modules:
         - fedpkg
         - fedora-packager
         - copr-cli
+        - dhall
+        - dhall-json
         - rpm-build
         - rpmdevtools
         - tito
