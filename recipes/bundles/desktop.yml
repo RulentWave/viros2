@@ -19,6 +19,7 @@ modules:
         - dangerzone
         - google-noto-emoji-fonts
         - wezterm
+        - xdg-utils
     remove:
       packages:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
