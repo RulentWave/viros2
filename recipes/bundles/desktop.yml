@@ -18,6 +18,7 @@ modules:
         - gowall
         - dangerzone
         - google-noto-emoji-fonts
+        - wezterm
     remove:
       packages:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
