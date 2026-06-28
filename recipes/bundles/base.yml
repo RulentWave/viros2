@@ -62,3 +62,5 @@ modules:
         - helix
         - nvtop
         - b3sum
+        - zellij
+        - wezterm
