@@ -9,6 +9,7 @@ modules:
       files:
         - tailscale.repo
         - atim-nushell.repo
+        - wezterm.repo
         - terra.repo
       keys:
         - keys/tailscale-fedora-repo.gpg
