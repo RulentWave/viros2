@@ -63,4 +63,4 @@ modules:
         - nvtop
         - b3sum
         - zellij
-        - wezterm
+        - wezterm-nightly
