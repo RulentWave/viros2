@@ -14,6 +14,7 @@ modules:
         - keys/tailscale-fedora-repo.gpg
         - keys/atim-nushell.gpg
         - keys/terra.asc
+        - keys/western.gpg
 
     install:
       allow-erasing: true
