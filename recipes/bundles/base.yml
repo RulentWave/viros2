@@ -66,3 +66,4 @@ modules:
         - b3sum
         - zellij
         - wezterm-mux-server
+        - bat
