@@ -43,6 +43,7 @@ modules:
         - tokei
         - terra-mock-configs
         - rpm-sign
+        - zola
     group-install:
       with-optional: false
       packages:
