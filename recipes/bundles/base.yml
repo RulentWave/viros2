@@ -46,7 +46,6 @@ modules:
         - btop
         - wireshark-cli
         - nushell
-        - zram-generator-defaults
         - mkosi
         - tailscale
         - 7zip
