@@ -38,6 +38,7 @@ modules:
         - rpm-sign
         - zola
         - coreos-installer
+        - rust2rpm
     group-install:
       with-optional: false
       packages:
