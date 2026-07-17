@@ -7,7 +7,6 @@ modules:
     install:
       packages:
         - rustup
-        - perl
         - black
         - python3-isort
         - python3-yapf
@@ -22,8 +21,6 @@ modules:
         - fedpkg
         - fedora-packager
         - copr-cli
-        - dhall
-        - dhall-json
         - rpm-build
         - rpmdevtools
         - tito
@@ -33,9 +30,6 @@ modules:
         - meson
         - golang
         - python3-jinja2-cli
-        - gnome-boxes
-        - libvirt
-        - virt-install
         - zed
         - ollama
         - anda
