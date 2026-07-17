@@ -11,11 +11,13 @@ modules:
         - atim-nushell.repo
         - wezterm.repo
         - terra.repo
+        - virulent-nushell.repo
       keys:
         - keys/tailscale-fedora-repo.gpg
         - keys/atim-nushell.gpg
         - keys/terra.asc
         - keys/wezterm.gpg
+        - keys/virulent-nushell.gpg
 
     install:
       allow-erasing: true

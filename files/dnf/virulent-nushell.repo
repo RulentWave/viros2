@@ -1,0 +1,9 @@
+[copr:copr.fedorainfracloud.org:virulent:nushell]
+name=Copr repo for nushell owned by virulent
+baseurl=https://download.copr.fedorainfracloud.org/results/virulent/nushell/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
