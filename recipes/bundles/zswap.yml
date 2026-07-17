@@ -4,3 +4,7 @@ modules:
       - zswap.enabled=1
       - zswap.compressor=lz4
       - zswap.shrinker_enabled=1
+  - type: dnf
+    install:
+      packages:
+        - zswap-cli
