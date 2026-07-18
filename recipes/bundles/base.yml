@@ -69,4 +69,3 @@ modules:
         - eza
         - fzf
         - ripgrep
-        - doas
