@@ -19,6 +19,7 @@ modules:
         - dangerzone
         - google-noto-emoji-fonts
         - wezterm
+        - rio
         - xdg-terminal-exec
     remove:
       packages:
