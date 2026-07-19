@@ -68,3 +68,4 @@ modules:
         - eza
         - fzf
         - ripgrep
+        - rio
