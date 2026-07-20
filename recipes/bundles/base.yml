@@ -63,9 +63,7 @@ modules:
         - nvtop
         - b3sum
         - zellij
-        - wezterm-mux-server
         - bat
         - eza
         - fzf
         - ripgrep
-        - rio
