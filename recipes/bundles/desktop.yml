@@ -18,8 +18,7 @@ modules:
         - gowall
         - dangerzone
         - google-noto-emoji-fonts
-        - wezterm
-        - rio
+        - alacritty
         - xdg-terminal-exec
     remove:
       packages:
