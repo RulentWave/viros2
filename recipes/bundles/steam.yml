@@ -12,3 +12,4 @@ modules:
         - gamescope
         - gamemode
         - mangohud
+        - goverlay
