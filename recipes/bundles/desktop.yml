@@ -19,6 +19,9 @@ modules:
         - dangerzone
         - google-noto-emoji-fonts
         - alacritty
+        - rio
+        - ghostty
+        - foot
         - xdg-terminal-exec
     remove:
       packages:
