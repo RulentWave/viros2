@@ -67,3 +67,4 @@ modules:
         - eza
         - fzf
         - ripgrep
+        - wezterm-mux-server

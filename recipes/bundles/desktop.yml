@@ -19,7 +19,9 @@ modules:
         - dangerzone
         - google-noto-emoji-fonts
         - alacritty
+        - wezterm
         - rio
+        - kitty
         - ghostty
         - foot
         - xdg-terminal-exec
