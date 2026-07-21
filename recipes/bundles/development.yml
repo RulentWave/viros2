@@ -36,6 +36,7 @@ modules:
         - tokei
         - terra-mock-configs
         - rpm-sign
+        - mkosi
         - zola
         - coreos-installer
         - rust2rpm
