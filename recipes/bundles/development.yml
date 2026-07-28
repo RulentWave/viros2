@@ -25,6 +25,7 @@ modules:
         - rpmdevtools
         - tito
         - dotnet-sdk-10.0
+        - dotnet-sdk-aot-10.0
         - azure-cli
         - azure-vm-utils
         - meson
