@@ -68,3 +68,4 @@ modules:
         - fzf
         - ripgrep
         - wezterm-mux-server
+        - usbguard
