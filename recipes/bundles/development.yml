@@ -41,6 +41,7 @@ modules:
         - zola
         - coreos-installer
         - rust2rpm
+        - android-studio
     group-install:
       with-optional: false
       packages:
