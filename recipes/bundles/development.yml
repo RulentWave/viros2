@@ -44,6 +44,7 @@ modules:
         - android-studio
         - tcpdump
         - wireshark
+        - nmap
     group-install:
       with-optional: false
       packages:
