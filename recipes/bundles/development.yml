@@ -42,6 +42,8 @@ modules:
         - coreos-installer
         - rust2rpm
         - android-studio
+        - tcpdump
+        - wireshark
     group-install:
       with-optional: false
       packages:
