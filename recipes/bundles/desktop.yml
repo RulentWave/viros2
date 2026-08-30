@@ -25,6 +25,7 @@ modules:
         - ghostty
         - foot
         - xdg-terminal-exec
+        - libratbag-ratbagd
     remove:
       packages:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
