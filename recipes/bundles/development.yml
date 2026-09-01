@@ -45,6 +45,7 @@ modules:
         - tcpdump
         - wireshark
         - nmap
+        - perl-Image-ExifTool
     group-install:
       with-optional: false
       packages:
