@@ -46,6 +46,7 @@ modules:
         - wireshark
         - nmap
         - perl-Image-ExifTool
+        - swaks
     group-install:
       with-optional: false
       packages:
