@@ -47,6 +47,7 @@ modules:
         - nmap
         - perl-Image-ExifTool
         - swaks
+        - ipcalc
     group-install:
       with-optional: false
       packages:
