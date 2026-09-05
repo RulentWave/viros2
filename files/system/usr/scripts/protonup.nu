@@ -5,8 +5,22 @@ def main [] {
 	)
 
     let latest_version = $release.tag_name
+    let architecture = (uname | get machine)
+    if $architecture != "x86_64" and $architecture != "aarch64" {
+        error make { msg: $"Unsupported architecture: ($architecture)" }
+    }
+
+    let archive = $"($latest_version)-($architecture).tar.gz"
+    let shasumfile = $"($latest_version)-($architecture).sha512sum"
+    let assets = $release.assets | where {|asset|
+        $asset.name == $archive or $asset.name == $shasumfile
+    }
+    if ($assets | length) != 2 {
+        error make { msg: $"Release ($latest_version) does not contain a Proton-GE archive and checksum for ($architecture)" }
+    }
+
     let install_dir = $nu.home-dir | path join ".steam/steam/compatibilitytools.d"
-    let latest_path = $install_dir | path join $latest_version
+    let latest_path = $install_dir | path join $"($latest_version)-($architecture)"
     mkdir $install_dir
 
     if ($latest_path | path exists) {
@@ -19,7 +33,7 @@ def main [] {
 
     let working_dir = (mktemp -d)
 
-    $release.assets | each {|a|
+    $assets | each {|a|
 		let download = $working_dir | path join $a.name
 		wget $a.browser_download_url -O $download
 		if $env.LAST_EXIT_CODE != 0 {
@@ -37,10 +51,8 @@ def main [] {
 		}
 	}
     cd $working_dir
-    # Check sha512sum after checking against the github digest. this checks the downloaded file against the downloaded sha512sum in case something is wrong with the github sha256 digest
-    let shasumfile = $"($latest_version).sha512sum"
-    let archive = $"($latest_version).tar.gz"
-
+    # Check sha512sum after checking against the GitHub digest. This also verifies
+    # the downloaded archive against the downloaded release checksum.
     sha512sum -c $shasumfile
     if $env.LAST_EXIT_CODE != 0 {
         notify-send "ProtonUp-nu" $"SHA512 check failed for ($archive)"
