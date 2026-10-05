@@ -8,12 +8,11 @@ modules:
     repos:
       files:
         - tailscale.repo
-        - atim-nushell.repo
+        - gemfury-nushell.repo
         - wezterm.repo
         - terra.repo
       keys:
         - keys/tailscale-fedora-repo.gpg
-        - keys/atim-nushell.gpg
         - keys/terra.asc
         - keys/wezterm.gpg
         - keys/virulent-nushell.gpg
