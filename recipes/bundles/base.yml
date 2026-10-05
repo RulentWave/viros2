@@ -30,7 +30,6 @@ modules:
         - btrfsmaintenance
         - minisign
         - duperemove
-        - yt-dlp-git
         - neovim
         - luarocks
         - clevis
@@ -67,9 +66,13 @@ modules:
         - wezterm-mux-server
         - terra-release
         - usbguard
+
+  # Second DNF module entry to install packages from terra
   - type: dnf
     install:
-      allow-erasing: true
       packages:
-        - carapace
-        - yazi
+        - repo: terra
+          packages:
+            - yt-dlp-git
+            - carapace
+            - zellij
