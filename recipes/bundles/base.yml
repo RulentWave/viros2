@@ -57,14 +57,19 @@ modules:
         - just
         - qemu-kvm
         - edk2-ovmf
-        - carapace
         - helix
         - nvtop
         - b3sum
-        - zellij
         - bat
         - eza
         - fzf
         - ripgrep
         - wezterm-mux-server
+        - terra-release
         - usbguard
+  - type: dnf
+    install:
+      allow-erasing: true
+      packages:
+        - carapace
+        - yazi
