@@ -64,15 +64,8 @@ modules:
         - ripgrep
         - wezterm-mux-server
         - usbguard
-
-  # Second DNF module entry to install packages from terra
-  - type: dnf
-    install:
-      packages:
-        - repo: terra
-          packages:
-            - terra-release
-            - yt-dlp-git
-            - carapace
-            - zellij
-            - yazi
+        - terra-release
+        - yt-dlp-git
+        - carapace
+        - zellij
+        - yazi
