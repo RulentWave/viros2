@@ -65,9 +65,7 @@ modules:
         - wezterm-mux-server
         - usbguard
         - terra-release
-        - yt-dlp-git+default
-        - yt-dlp-git-bash-completion
-        - yt-dlp-git-zsh-completion
+        - yt-dlp
         - carapace
         - zellij
         - yazi
