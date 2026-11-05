@@ -3,7 +3,6 @@ modules:
     repos:
       files:
         - brave-browser.repo
-        - dangerzone.repo
         - achno-gowall.repo
       keys:
         - keys/brave-core.asc
@@ -16,7 +15,6 @@ modules:
         - mpv-mpris
         - skanpage
         - gowall
-        - dangerzone
         - google-noto-emoji-fonts
         - alacritty
         - wezterm
