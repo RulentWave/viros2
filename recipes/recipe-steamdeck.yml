@@ -12,7 +12,8 @@ image-version: latest
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: bundles/base.yml
+  # Bazzite already provides the Terra repository and signing key.
+  - from-file: bundles/base-common.yml
   - from-file: bundles/base-systemd.yml
   - from-file: bundles/desktop.yml
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
