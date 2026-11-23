@@ -20,7 +20,6 @@ modules:
         - wezterm
         - rio
         - kitty
-        - ghostty
         - foot
         - xdg-terminal-exec
         - libratbag-ratbagd
