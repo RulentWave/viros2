@@ -1,5 +1,3 @@
-# Do not modify this file. If you want to add modifications to the repository configurations, add them in /etc/dnf/repos.override.d/
-
 [terra]
 name=Terra $releasever
 #baseurl=https://repos.fyralabs.com/terra$releasever
@@ -7,7 +5,7 @@ metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever&arch=$base
 metadata_expire=6h
 type=rpm
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-terra$releasever
+gpgkey=file:///usr/share/pki/rpm-gpg/RPM-GPG-KEY-terra$releasever
 # Terra currently uses a CDN based on the origin repo, so this is safe
 repo_gpgcheck=0
 enabled=1
@@ -21,7 +19,7 @@ metalink=https://tetsudou.fyralabs.com/metalink?repo=terra$releasever-source&arc
 metadata_expire=6h
 type=rpm
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-terra$releasever-source
+gpgkey=file:///usr/share/pki/rpm-gpg/RPM-GPG-KEY-terra$releasever-source
 # Terra currently uses a CDN based on the origin repo, so this is safe
 repo_gpgcheck=0
 enabled=0
