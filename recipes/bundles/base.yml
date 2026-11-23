@@ -11,7 +11,5 @@ modules:
         - zellij
         - yazi
         - starship
-        - terra-release
-        - terra-gpg-keys
 
   - from-file: bundles/base-common.yml
