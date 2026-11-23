@@ -45,6 +45,8 @@ modules:
         - nmap
         - perl-Image-ExifTool
         - swaks
+        - dfu-util
+        - dfu-programmer
         - ipcalc
     group-install:
       with-optional: false
