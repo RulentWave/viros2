@@ -5,5 +5,12 @@ modules:
         - terra.repo
       keys:
         - keys/terra.asc
+    install:
+      allow-erasing: true
+      packages:
+        - carapace
+        - zellij
+        - yazi
+        - starship
 
   - from-file: bundles/base-common.yml

@@ -65,7 +65,3 @@ modules:
         - usbguard
         - terra-release
         - yt-dlp
-        - carapace
-        - zellij
-        - yazi
-        - starship
