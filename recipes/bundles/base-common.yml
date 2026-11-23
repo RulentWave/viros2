@@ -63,5 +63,4 @@ modules:
         - ripgrep
         - wezterm-mux-server
         - usbguard
-        - terra-release
         - yt-dlp

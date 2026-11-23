@@ -6,11 +6,12 @@ modules:
       keys:
         - keys/terra.asc
     install:
-      allow-erasing: true
       packages:
         - carapace
         - zellij
         - yazi
         - starship
+        - terra-release
+        - terra-gpg-keys
 
   - from-file: bundles/base-common.yml
